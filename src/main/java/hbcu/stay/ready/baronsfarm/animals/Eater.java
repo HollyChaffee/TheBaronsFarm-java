@@ -4,5 +4,5 @@ import hbcu.stay.ready.baronsfarm.ediblefoods.Edible;
 
 public interface Eater {
 
-    void eat(Edible edible);
+    void eat(Edible food);
 }

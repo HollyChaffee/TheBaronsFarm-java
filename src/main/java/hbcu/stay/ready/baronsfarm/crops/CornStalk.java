@@ -1,4 +1,15 @@
 package hbcu.stay.ready.baronsfarm.crops;
 
-public class CornStalk {
-}
+import hbcu.stay.ready.baronsfarm.ediblefoods.EarCorn;
+
+public class CornStalk extends Crop {
+
+//    public EarCorn yield() {
+//        if (isHasBeenFertilized() && isHasBeenHarvested() {
+//            return new EarCorn();
+//        }
+//            return null;
+//        }
+    }
+
+

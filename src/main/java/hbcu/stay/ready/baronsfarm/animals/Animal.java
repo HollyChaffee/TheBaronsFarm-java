@@ -1,14 +1,10 @@
 package hbcu.stay.ready.baronsfarm.animals;
 
-public abstract class Animal implements NoiseMaker, Eater {
+import hbcu.stay.ready.baronsfarm.ediblefoods.Edible;
 
-    public String makeNoise() {
+import java.util.ArrayList;
 
-        return null;
-    }
+public interface Animal extends NoiseMaker, Eater {
 
-    public void eat() {
-
-    }
 }
 
