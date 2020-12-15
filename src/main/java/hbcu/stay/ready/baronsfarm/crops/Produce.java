@@ -4,13 +4,13 @@ import hbcu.stay.ready.baronsfarm.ediblefoods.Edible;
 
 public abstract class Produce {
 
-    private boolean hasBeenHarvested;
+
     private boolean hasBeenFertilized;
 
 
     public Produce() {
         hasBeenFertilized = false;
-        hasBeenHarvested = false;
+
     }
 
     public boolean isHasBeenFertilized() {
@@ -21,11 +21,8 @@ public abstract class Produce {
         this.hasBeenFertilized = hasBeenFertilized;
     }
 
-    public boolean isHasBeenHarvested() {
-        return hasBeenHarvested;
-    }
 
-    public void setHasBeenHarvested(boolean hasBeenHarvested) {
-        this.hasBeenHarvested = hasBeenHarvested;
-    }
+    public abstract Edible yield();
+
+
 }

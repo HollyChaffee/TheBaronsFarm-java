@@ -1,15 +1,17 @@
 package hbcu.stay.ready.baronsfarm.crops;
 
-public abstract class Crop extends Produce{
+import hbcu.stay.ready.baronsfarm.ediblefoods.Edible;
 
-    private Boolean hasBeenHarvested;
-    private Boolean hasBeenFertilized;
+public class Crop extends Produce{
+
+    private boolean hasBeenHarvested;
+    private boolean hasBeenFertilized;
 
     public Crop() {
         this.hasBeenFertilized = false;
         this.hasBeenHarvested = false;
     }
-    public Boolean getHasBeenHarvested() {
+    public boolean isHasBeenHarvested() {
         return hasBeenHarvested;
     }
 
@@ -18,12 +20,17 @@ public abstract class Crop extends Produce{
     }
 
 
-    public Boolean getHasBeenFertilized() {
+    public boolean isHasBeenFertilized() {
         return hasBeenFertilized;
     }
 
 
     public void setHasBeenFertilized(boolean hasBeenFertilized) {
         this.hasBeenFertilized = hasBeenFertilized;
+    }
+
+    @Override
+    public Edible yield() {
+        return null;
     }
 }
