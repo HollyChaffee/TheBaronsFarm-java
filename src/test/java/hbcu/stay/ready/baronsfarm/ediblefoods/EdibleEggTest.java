@@ -16,13 +16,13 @@ public class EdibleEggTest {
     @Test
     public void getEdibleEggTest() {
         //Given
-        edibleEgg.isEdible();
+        edibleEgg.getIsEdible();
 
         //When
         Boolean expected = true;
-        Boolean actual = edibleEgg.isEdible();
+        Boolean actual = edibleEgg.getIsEdible();
 
         //Then
-        Assert.assertTrue(actual);
+        Assert.assertEquals(expected, actual);
     }
 }

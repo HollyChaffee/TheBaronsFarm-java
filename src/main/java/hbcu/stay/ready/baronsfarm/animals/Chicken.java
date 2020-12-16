@@ -2,30 +2,48 @@ package hbcu.stay.ready.baronsfarm.animals;
 
 import hbcu.stay.ready.baronsfarm.crops.Produce;
 import hbcu.stay.ready.baronsfarm.ediblefoods.Edible;
-
-import java.util.ArrayList;
+import hbcu.stay.ready.baronsfarm.ediblefoods.EdibleEgg;
 
 public class Chicken extends Produce implements Animal {
 
-
-
-    public Boolean hasBeenFertilized() {
-        return null;
+    public boolean getHasBeenHarvested() {
+        return hasBeenHarvested;
     }
 
-    public Boolean hasNotBeenFertilized() {
-        return null;
+    public boolean getHasBeenFertilized() {
+        return hasBeenFertilized;
+    }
+
+    public boolean getHasNotBeenFertilized() {
+        return false;
+    }
+
+    public void harvest() {
+        hasBeenHarvested = true;
+    }
+
+    public void fertilize() {
+        hasBeenFertilized = true;
     }
 
     public String makeNoise() {
-        return "Cluck Cluck!";
+        return "Cluck cluck";
     }
 
-    public void eat(Edible edible) {
-
-    }
-
-    public Edible yield() {
+    public EdibleEgg yield() {
+        if (hasBeenFertilized && hasBeenHarvested) {
+            EdibleEgg egg = new EdibleEgg();
+            return egg;
+        }
         return null;
+    }
+
+    public String eat(Edible food) {
+        String message = "";
+        if (food != null) {
+            message += "Chicken has eaten the food!";
+            System.out.println(message);
+        }
+        return message;
     }
 }

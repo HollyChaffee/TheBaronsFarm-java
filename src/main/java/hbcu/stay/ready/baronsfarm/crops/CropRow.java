@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class CropRow {
 
-    private final ArrayList<Crop> cropsInRow = new ArrayList<Crop>();
+    private final ArrayList<Crop> cropRows = new ArrayList<Crop>();
 
-    public ArrayList<Crop> getCropsInRow() {
-        return cropsInRow;
+    public ArrayList<Crop> getCropRows() {
+        return cropRows;
     }
 }

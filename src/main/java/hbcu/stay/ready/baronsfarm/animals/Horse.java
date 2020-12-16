@@ -35,8 +35,9 @@ public class Horse implements Animal, Rideable {
 
     }
 
-    public void eat(Edible food) {
+    public String eat(Edible food) {
 
+        return null;
     }
 }
 

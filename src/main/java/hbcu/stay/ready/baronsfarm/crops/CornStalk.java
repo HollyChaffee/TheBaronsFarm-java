@@ -4,12 +4,17 @@ import hbcu.stay.ready.baronsfarm.ediblefoods.EarCorn;
 
 public class CornStalk extends Crop {
 
-//    public EarCorn yield() {
-//        if (isHasBeenFertilized() && isHasBeenHarvested() {
-//            return new EarCorn();
-//        }
-//            return null;
-//        }
+    public EarCorn yield() {
+        return null;
     }
+
+    public boolean getHasBeenFertilized() {
+        return false;
+    }
+
+    public boolean getHasNotBeenFertilized() {
+        return false;
+    }
+}
 
 

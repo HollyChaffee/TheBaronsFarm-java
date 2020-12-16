@@ -1,5 +1,6 @@
 package hbcu.stay.ready.baronsfarm.ediblefoods;
 
-public abstract class Edible {
+public interface Edible {
 
+    boolean getIsEdible();
 }

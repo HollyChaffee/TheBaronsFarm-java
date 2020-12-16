@@ -4,25 +4,15 @@ import hbcu.stay.ready.baronsfarm.ediblefoods.Edible;
 
 public abstract class Produce {
 
+    protected boolean hasBeenHarvested = false;
+    protected boolean hasBeenFertilized = false;
 
-    private boolean hasBeenFertilized;
-
-
-    public Produce() {
-        hasBeenFertilized = false;
-
-    }
-
-    public boolean isHasBeenFertilized() {
-        return hasBeenFertilized;
-    }
-
-    public void setHasBeenFertilized(boolean hasBeenFertilized) {
-        this.hasBeenFertilized = hasBeenFertilized;
-    }
-
-
+    public abstract void harvest();
+    public abstract void fertilize();
     public abstract Edible yield();
 
+    public abstract boolean getHasBeenHarvested();
+    public abstract boolean getHasBeenFertilized();
 
+    public abstract boolean getHasNotBeenFertilized();
 }

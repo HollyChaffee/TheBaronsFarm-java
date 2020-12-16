@@ -13,29 +13,29 @@ public class ChickenTest {
     }
 
     @Test
-    public void hasBeenFertilizedTest() {
+    public void getHasBeenFertilizedTest() {
         //Given
-        chicken.hasBeenFertilized();
+        chicken.getHasBeenFertilized();
 
         //When
-        Boolean expected = true;
-        Boolean actual = chicken.hasBeenFertilized();
+        boolean expected = false;
+        boolean actual = chicken.getHasBeenFertilized();
 
         //Then
-        Assert.assertTrue(actual);
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void hasNotBeenFertilizedTest() {
+    public void getHasNotBeenFertilizedTest() {
         //Given
-        chicken.hasNotBeenFertilized();
+        chicken.getHasNotBeenFertilized();
 
         //When
-        Boolean expected = false;
-        Boolean actual = chicken.hasNotBeenFertilized();
+        boolean expected = false;
+        boolean actual = chicken.getHasNotBeenFertilized();
 
         //Then
-        Assert.assertFalse(actual);
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
@@ -44,7 +44,7 @@ public class ChickenTest {
         chicken.makeNoise();
 
         //When
-        String expected = "Cluck Cluck";
+        String expected = "Cluck cluck";
         String actual = chicken.makeNoise();
 
         //Then
